@@ -12,27 +12,27 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.logo {
-  margin-top: 64px;
-  margin-bottom: 24px;
-}
-
-.logo svg {
-  width: 92px;
-  height: 92px;
+  justify-content: center;
 }
 
 .card {
   width: 448px;
   max-width: 90%;
   background: #fff;
-  padding: 48px 40px 36px;
+  padding: 32px 40px 36px;
   border-radius: 12px;
   box-shadow:
     0 1px 3px rgba(60,64,67,.3),
     0 4px 8px rgba(60,64,67,.15);
+}
+
+.logo {
+  margin-bottom: 16px;
+}
+
+.logo svg {
+  width: 48px;
+  height: 48px;
 }
 
 h1 {
