@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Roboto', Arial, sans-serif;
-  background: #f2f2f2;
   margin: 0;
-  padding: 0;
   min-height: 100vh;
-  text-align: center;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #f1f3f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
-  display: block;
-  margin: 80px auto 32px auto;
+  margin-top: 64px;
+  margin-bottom: 24px;
 }
 
 .logo svg {
@@ -20,84 +25,87 @@ body {
 }
 
 .card {
-  background: white;
-  padding: 32px 48px;
-  border-radius: 8px;
-  width: 360px;
+  width: 448px;
   max-width: 90%;
-  margin: 0 auto;
-  text-align: left;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background: #fff;
+  padding: 48px 40px 36px;
+  border-radius: 12px;
+  box-shadow:
+    0 1px 3px rgba(60,64,67,.3),
+    0 4px 8px rgba(60,64,67,.15);
 }
 
 h1 {
-  font-weight: 400;
-  font-size: 24px;
   margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 400;
+  color: #202124;
 }
 
 .subtitle {
+  margin: 0 0 32px;
+  font-size: 16px;
   color: #5f6368;
-  font-size: 14px;
-  margin-bottom: 24px;
 }
 
-input[type="email"],
-input[type="password"] {
+input {
   width: 100%;
-  padding: 14px;
+  height: 56px;
+  padding: 13px 15px;
   font-size: 16px;
-  margin-bottom: 12px;
   border: 1px solid #dadce0;
   border-radius: 4px;
   outline: none;
-  box-sizing: border-box;
 }
 
 input:focus {
-  border-color: #1a73e8;
-  box-shadow: 0 1px 2px rgba(26,115,232,0.3);
-}
-
-button {
-  margin-top: 24px;
-  background: #1a73e8;
-  border: none;
-  color: white;
-  padding: 12px 0;
-  border-radius: 4px;
-  font-size: 14px;
-  cursor: pointer;
-  width: 100%;
-  font-weight: 500;
-}
-
-button:hover {
-  background: #1669c1;
+  border: 2px solid #1a73e8;
+  padding: 12px 14px;
 }
 
 .link {
-  display: block;
-  margin-top: 16px;
-  color: #1a73e8;
+  display: inline-block;
+  margin-top: 12px;
   font-size: 14px;
+  font-weight: 500;
+  color: #1a73e8;
   text-decoration: none;
 }
 
-.error-message {
-  color: #d93025;
-  font-size: 13px;
-  margin-top: -8px;
-  margin-bottom: 12px;
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
 }
 
-@media (max-width: 600px) {
-  .card {
-    padding: 24px 32px;
-  }
+button.primary {
+  height: 36px;
+  padding: 0 24px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background: #1a73e8;
+  cursor: pointer;
+}
 
-  .logo svg {
-    width: 72px;
-    height: 72px;
-  }
+button.primary:hover {
+  background: #1669c1;
+}
+
+.error-message {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #d93025;
+}
+
+.footer {
+  width: 448px;
+  max-width: 90%;
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #5f6368;
 }
