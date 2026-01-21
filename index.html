@@ -30,19 +30,25 @@
       box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     }
 
-    /* Google logo */
+    /* Single Google G logo */
     .logo {
-      font-size: 32px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: conic-gradient(
+        #4285f4 0deg 90deg,
+        #ea4335 90deg 180deg,
+        #fbbc05 180deg 270deg,
+        #34a853 270deg 360deg
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
       font-weight: bold;
+      color: white;
       margin-bottom: 20px;
     }
-
-    .logo span:nth-child(1) { color: #4285f4; }
-    .logo span:nth-child(2) { color: #ea4335; }
-    .logo span:nth-child(3) { color: #fbbc05; }
-    .logo span:nth-child(4) { color: #4285f4; }
-    .logo span:nth-child(5) { color: #34a853; }
-    .logo span:nth-child(6) { color: #ea4335; }
 
     h2 {
       margin: 0;
@@ -101,7 +107,7 @@
       background: #1558c0;
     }
 
-    /* 📱 Small screens */
+    /* Mobile tweaks */
     @media (max-width: 480px) {
       .card {
         padding: 24px 20px;
@@ -112,7 +118,9 @@
       }
 
       .logo {
-        font-size: 30px;
+        width: 44px;
+        height: 44px;
+        font-size: 26px;
       }
 
       .actions {
@@ -125,9 +133,7 @@
 <body>
 
   <div class="card">
-    <div class="logo">
-      <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
-    </div>
+    <div class="logo">G</div>
 
     <h2>Sign in</h2>
     <p>to continue</p>
